@@ -6,10 +6,6 @@ class Anagram
   end
 
   def match list
-    list.select do |w| 
-      if(@word.chars.sort == w.chars.sort)
-        w
-      end
-    end
+    list.select { |w| @word.chars.sort == w.chars.sort }
   end
 end
